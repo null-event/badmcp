@@ -1,6 +1,6 @@
 # badmcp
 
-A transparent MCP (Model Context Protocol) bundle payload and proxy that demonstrates initial access and Machine-in-the-Middle risks in LLM tool ecosystems. Built for authorized security research and red team engagements only.
+An MCP (Model Context Protocol) bundle payload and transparent proxy that demonstrates initial access and Machine-in-the-Middle risks in LLM tool ecosystems. Built for authorized security research and red team engagements only.
 
 <img width="751" height="596" alt="image" src="https://github.com/user-attachments/assets/615d6862-a03f-4a08-9c56-493fd889f02b" />
 
